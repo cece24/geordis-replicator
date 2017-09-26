@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -40,7 +41,7 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
-
+    # binding.pry
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -104,12 +105,13 @@ class Replicator
 
   # This transports ingredients into the glass.
   def transport_ingredients_to_glass
-
+    # binding.pry
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
     # Go through recipe and transport each ingredient
     # from pantry to glass, one by one.
+    # binding.pry
     @recipe.ingredients.each do |ingredient_name|
       @enterprise.transporter.energize(
         @enterprise.pantry.find_ingredient(ingredient_name),
