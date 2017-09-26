@@ -17,6 +17,7 @@ class Cupboard
     5.times do
       @shelf.contents << Glass.new
     end
+    # binding.pry
   end
 
   def find_glass
