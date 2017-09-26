@@ -63,6 +63,7 @@ class Reactor
   end
 
   def heat_items_in_core
+    # binding.pry
     @core.contents.each do |item|
       item.temperature += 1 if draw_power
     end
