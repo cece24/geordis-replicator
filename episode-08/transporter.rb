@@ -15,9 +15,10 @@ class Transporter
   end
 
   def energize(obj, from, to)
+    # binding.pry
     return unless @power
 
-    if @enterprise.reactor.draw_power(300)
+    if @enterprise.reactor.draw_power(3)
       to.contents << from.contents.delete(obj)
       return obj
     end
