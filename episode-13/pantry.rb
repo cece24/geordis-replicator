@@ -15,14 +15,17 @@ class Pantry
   end
 
   def stock_shelf
+    # binding.pry
     Ingredient.names.each do |ingredient_name|
       3.times do
+        # binding.pry
         @shelf.contents << Ingredient.new(ingredient_name)
       end
     end
   end
 
   def find_ingredient(name)
+    # binding.pry
     @shelf.contents.find { |item| item.name == name }
   end
 
