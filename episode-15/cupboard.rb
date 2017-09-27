@@ -5,6 +5,7 @@
 class Cupboard
 
   def initialize
+    # binding.pry
     @shelf = Location.new
     stock_shelf
   end
@@ -20,7 +21,8 @@ class Cupboard
   end
 
   def find_glass
-    @shelf.contents.find { |obj| obj.class == Ingredient }
+    # binding.pry
+    @shelf.contents.find { |obj| obj.class == Glass }
   end
 
 end
