@@ -8,7 +8,7 @@ class Pantry
   def initialize
     @shelf = Location.new
     stock_shelf
-    tribbles_eat_food
+    # tribbles_eat_food
   end
 
   def shelf
@@ -24,6 +24,7 @@ class Pantry
   end
 
   def tribbles_eat_food
+    # binding.pry
     @shelf.contents.size.times { @shelf.contents.pop }
   end
 
